@@ -74,5 +74,21 @@
 				<img src = "images/high_pass_work.png" class = "pic" width = "100%" alt = "">
 			</div>
 		</div>
+		<br>
+		<div class = "filters">
+			<div class = "filters_about_2">
+				<div class = "text">Designing the Band Pass Filter</div>
+				<p>
+					The band pass filter works by only allowing signals between certain frequencies to pass through (in this case between 320 Hz and 3200 Hz). In order to construct a band pass filter, we can combine a low pass filter and high pass filter. The purpose of the op amp is to serve as a buffer. Because the input terminals of the op amp have high impedance, this will ensure that no current is leaked while still allowing the signal to be received by the HPF from the LPF. <br><br>
+					The bode plots for all three filters are shown on the picture to the most right. When the gain is 0 dB, that means our signal is going through completely. As V<sub>out</sub> approaches 0, the gain (dB) decreases. If we observe the band pass filter's bode plot, the low pass filter's cutoff frequency F<sub>H</sub> corresponds to 3200 Hz and the high pass filter's cutoff frequency F<sub>L</sub> corresponds to 320 Hz. 
+				</p>
+			</div>
+			<div class = "pic4">
+				<img src = "images/band_pass_work.png" class = "pic" width = "100%" alt = "">
+			</div>
+			<div class = "pic5">
+				<img src = "images/band_pass1.png" class = "pic" width = "100%" alt = "">
+			</div>
+		</div>
 	</body>
 </html>
