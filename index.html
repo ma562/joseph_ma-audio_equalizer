@@ -37,8 +37,8 @@
 			</div>
 		</div>
 		<br>
-		<div class = "low_pass">
-			<div class = "low_pass_about">
+		<div class = "filters">
+			<div class = "filters_about">
 				<div class = "text">Designing the Low Pass Filter</div>
 				<p>
 					The low pass filter works by only allowing signals with low frequencies to pass through. Our goal is to only allow frequencies below 320 Hz. One way I found helpful in understanding the low pass filter is to observe how the capacitor works at very low and very high frequencies. The I-V characteristics of a capacitor can be represented as a differential equation. I = C * dv/dt where I is current, C is the capacitance of the capacitor and dv/dt is the rate of change of the voltage. <br><br>When the signal V<sub>in</sub> has very low frequencies close to 0, that means V<sub>in</sub> is a DC constant signal. The rate of change or derivative of any constant is 0 and therefore I (the current) is 0. At this point, we can treat the capacitor as an open circuit since there is no current going through. There will be no current going through the resistor R1 which means there is no voltage drop across that resistor. Therefore V<sub>out</sub> will be equal to V<sub>in</sub> and the signal passes through.<br><br>When the signal V<sub>in</sub> has a very high frequency, the capacitor can be treated as a short circuit. Based on Ohm's law V = IR, the voltage drop across a short circuit is 0. Therefore V<sub>out</sub> is 0 and the signal is filtered out. 
@@ -51,7 +51,28 @@
 			<div class = "pic3">
 				<img src = "images/low_pass_work.png" class = "pic" width = "100%" alt = "">
 			</div>
+		</div>
+		<br>
+		<div class = "filters">
+			<div class = "filters_about">
+				<div class = "text">Designing the High Pass Filter</div>
+				<p>
+					The high pass filter works by only allowing signals with high frequencies to pass through. Our goal is to only allow frequencies above 3200 Hz. It relies on the same concept behind the low pass filter. However, in order to filter out high frequencies instead of low ones, we will have to rearrange the positions of the resistor/capacitor and switch them around.
 
+					 <br><br>When the signal V<sub>in</sub> has very low frequencies close to 0, we can treat the capacitor as an open circuit. Because there is no current flowing through the open circuit, there will be no current across the resistor R<sub>7</sub>. Therefore V<sub>out</sub> will be 0 and the signal is filtered out.<br><br>
+
+
+					 When the signal V<sub>in</sub> has a very high frequency, the capacitor can be treated as a short circuit. Because there is no voltage drop across the short circuit, V<sub>in</sub> and V<sub>out</sub> are both measured at the same nodes and thus will be the same. Therefore the signal passes through.
+
+					<br><br>Again the cutoff frequency F<sub>c</sub> can be calculated with the equation 1/2πRC where R is the resistance of the resistor and C the capacitance of the capacitor. 
+				</p>
+			</div>
+			<div class = "pic2">
+				<img src = "images/high_pass1.png" class = "pic" width = "100%" alt = "">
+			</div>
+			<div class = "pic3">
+				<img src = "images/high_pass_work.png" class = "pic" width = "100%" alt = "">
+			</div>
 		</div>
 	</body>
 </html>

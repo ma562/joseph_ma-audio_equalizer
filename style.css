@@ -96,7 +96,7 @@
 	margin-left: 20px;
 }
 
-.low_pass {
+.filters {
 	display: flex;
 	flex-wrap: wrap;
 	align-content: center;
@@ -116,7 +116,7 @@
 	right: 2%;
 }
 
-.low_pass_about {
+.filters_about {
 	width: 42%;
 	font-family: 'Poppins', sans-serif;
 	color: #00274c;
@@ -138,13 +138,13 @@
 }
 
 @media (max-width: 900px) {
-	.pic2, .pic3, .low_pass_about {
+	.pic2, .pic3, .filters_about {
 		flex: 100%;
 		left: 0%;
 		right: 0%;
 	}
 
-	.low_pass_about {
+	.filters_about {
 		padding: 15px;
 	}
 }
