@@ -16,5 +16,42 @@
 		</div>
 	</nav>
 	<body>
+		<div class = "top_info">
+			<div class = "pic1">
+				<img src = "images/audio_eq.png" class = "pic" width = "100%" alt = "">
+			</div>
+			<div class = "information">
+				<div class = "text">About</div>
+				<p>
+					The goal of this project was to be able to control the relative strength of individual frequency bands from an input signal. Three signals were seperated from each other using filters. After each individual frequency band was adjusted and scaled by a desired magnitude using operational amplifiers and potentiometers, the signals were combined back together as one signal. The output signal's magnitude could also be adjusted at the end.
+					<br><br>
+					The input signal was seperated into 3 frequency bands: 
+					<ul class = "shift">
+						<li>Bass Frequency (Less than 320 Hz)</li>
+						<li>Mid Frequency (Between 320 Hz and 3200 Hz)</li>
+						<li>Treble Frequency (Above 3200 Hz)</li>
+					</ul>
+					<br>
+					In order to control the scaling and gain of each signal, operational amplifiers and potentiometers were used. The potentiometers were used as the feedback resistor for each operational amplifier. Because potentiometers allow the user to control its resistance value, this allows the user to also control the scaling and gain of each signal.
+				</p>
+			</div>
+		</div>
+		<br>
+		<div class = "low_pass">
+			<div class = "low_pass_about">
+				<div class = "text">Designing the Low Pass Filter</div>
+				<p>
+					The low pass filter works by only allowing signals with low frequencies to pass through. Our goal is to only allow frequencies below 320 Hz. One way I found helpful in understanding the low pass filter is to observe how the capacitor works at very low and very high frequencies. The I-V characteristics of a capacitor can be represented as a differential equation. I = C * dv/dt where I is current, C is the capacitance of the capacitor and dv/dt is the rate of change of the voltage. <br><br>When the signal V<sub>in</sub> has very low frequencies close to 0, that means V<sub>in</sub> is a DC constant signal. The rate of change or derivative of any constant is 0 and therefore I (the current) is 0. At this point, we can treat the capacitor as an open circuit since there is no current going through. There will be no current going through the resistor R1 which means there is no voltage drop across that resistor. Therefore V<sub>out</sub> will be equal to V<sub>in</sub> and the signal passes through.<br><br>When the signal V<sub>in</sub> has a very high frequency, the capacitor can be treated as a short circuit. Based on Ohm's law V = IR, the voltage drop across a short circuit is 0. Therefore V<sub>out</sub> is 0 and the signal is filtered out. 
+					<br><br>The cutoff frequency F<sub>c</sub> can be calculated with the equation 1/2πRC where R is the resistance of the resistor and C the capacitance of the capacitor. 
+				</p>
+			</div>
+			<div class = "pic2">
+				<img src = "images/low_pass1.png" class = "pic" width = "100%" alt = "">
+			</div>
+			<div class = "pic3">
+				<img src = "images/low_pass_work.png" class = "pic" width = "100%" alt = "">
+			</div>
+
+		</div>
 	</body>
 </html>

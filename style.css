@@ -66,3 +66,85 @@
 	font-weight: 500;
 	margin-left: 25px;
 }
+
+.top_info {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+	top: 100px;
+	position: relative;
+}
+
+.pic1{
+	width: 35%;
+	left: 2%;
+	position: relative;
+}
+
+.information{
+	width: 57%;
+	font-family: 'Poppins', sans-serif;
+	color: #00274c;
+	margin-right: 20px;
+	text-align: justify;
+	position: relative;
+	right: 2%;
+}
+
+.shift {
+	margin-left: 20px;
+}
+
+.low_pass {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+	top: 100px;
+	position: relative;
+}
+
+.pic2 {
+	width: 25%;
+	position: relative;
+}
+
+.pic3 {
+	width: 25%;
+	position: relative;
+	right: 2%;
+}
+
+.low_pass_about {
+	width: 42%;
+	font-family: 'Poppins', sans-serif;
+	color: #00274c;
+	margin-right: 20px;
+	text-align: justify;
+	position: relative;
+	left: 2%;
+}
+
+@media (max-width: 1200px){
+	.pic1, .information{
+		flex: 100%;
+		left: 0%;
+		right: 0%;
+	}
+	.information {
+		padding: 15px;
+	}
+}
+
+@media (max-width: 900px) {
+	.pic2, .pic3, .low_pass_about {
+		flex: 100%;
+		left: 0%;
+		right: 0%;
+	}
+
+	.low_pass_about {
+		padding: 15px;
+	}
+}
