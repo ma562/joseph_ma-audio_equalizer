@@ -32,7 +32,7 @@
 						<li>Treble Frequency (Above 3200 Hz)</li>
 					</ul>
 					<br>
-					In order to control the scaling and gain of each signal, operational amplifiers and potentiometers were used. The potentiometers were used as the feedback resistor for each operational amplifier. Because potentiometers allow the user to control its resistance value, this allows the user to also control the scaling and gain of each signal.
+					In order to control the scaling and gain of each signal, operational amplifiers and potentiometers were used. The potentiometers were used as the feedback resistor for each operational amplifier. Because potentiometers allow the user to control its resistance value, this allows the user to also control the scaling and gain of each signal. Click <b><a href = "Final Lab 14 Report Joseph Ma.pdf" download= "" target = "_blank">here</a></b> for the results and full report. 
 				</p>
 			</div>
 		</div>
@@ -84,10 +84,10 @@
 				</p>
 			</div>
 			<div class = "pic4">
-				<img src = "images/band_pass_work.png" class = "pic" width = "100%" alt = "">
+				<img src = "images/band_pass1.png" class = "pic" width = "100%" alt = "">
 			</div>
 			<div class = "pic5">
-				<img src = "images/band_pass1.png" class = "pic" width = "100%" alt = "">
+				<img src = "images/band_pass_work.png" class = "pic" width = "100%" alt = "">
 			</div>
 		</div>
 		<br>
@@ -103,6 +103,66 @@
 			</div>
 			<div class = "pic7">
 				<img src = "images/summing_amp.png" class = "pic" width = "100%" alt = "">
+			</div>
+		</div>
+		<br>
+		<div class = "filters">
+			<div class = "potentiometer">
+				<div class = "text">Design Specifications</div>
+				<p>
+					The design specifications of the audio equalizer (with a test condition of V<sub>in</sub> being a 1 V<sub>pp</sub> Sinewave) are as follows (V_amp is the final output signal): 
+					<ul class = "shift">
+						<li>With all EQ set to minimum - V_amp < 15mV<sub>RMS</sub> (Ideally 0 V)</li>
+						<li>With all EQ set to maximum - V_amp = 100mV<sub>RMS</sub> ± 10%  </li>
+						<li>This will be tested at frequencies of 200Hz, 2KHz and 10K</li>
+					</ul>
+					<br>
+					The feedback resistors R<sub>f</sub> for each of the op amps are going to be potentiometers which serve as variable resistors from 0 to 10K Ω. Therefore we can write the gain as falling within a certain range with the max gain when R<sub>f</sub> is 10K Ω and the min gain when R<sub>f</sub> is 0 Ω.
+					<br><br>
+					At this point our only unknown variables are R<sub>in</sub> (for inverting amplifier) and R<sub>in</sub> (for summing amplifier). We don't have to worry about solving for EQ set to minimum specifications because the potentiometer ensures the feedback resistor R<sub>f</sub> is at 0 Ω resulting in 0 gain. To solve for specifications when EQ is set to max, we can plug in our desired specifications to get the gain. Because we have 2 unknowns and only 1 equation, a convenient value was first picked for the inverting amp's R<sub>in</sub>.
+				</p>
+			</div>
+			<div class = "pic8">
+				<img src = "images/design.png" class = "pic" width = "100%" alt = "">
+			</div>
+		</div>
+		<br><br>
+		<div class = "filters">
+			<div class = "conclusion">
+				<div class = "text">Conclusion</div>
+				<p>
+					The final calculated values for components are as follows:<br><br>
+					<b>Low Pass Filter</b>
+					<ul class = "shift">
+						<li>R<sub>1</sub>: 10K Ω</li>
+						<li>C<sub>1</sub>: 0.1 uF || 0.1 uF = 0.05 uF
+					</ul>
+					<b>Band Pass Filter</b>
+					<ul class = "shift">
+						<li>R<sub>3</sub>: 1K Ω</li>
+						<li>C<sub>2</sub>: 0.1 uF || 0.1 uF = 0.05 uF</li>
+						<li>R<sub>5</sub>: 10K Ω</li>
+						<li>C<sub>3</sub>: 0.1 uF || 0.1 uF = 0.05 uF</li>
+					</ul>
+					<b>High Pass Filter</b>
+					<ul class = "shift">
+						<li>R<sub>7</sub>: 1K Ω</li>
+						<li>C<sub>4</sub>: 0.1 uF || 0.1 uF = 0.05 uF</li>
+					</ul>
+					<b>Inverting Amplifier</b>
+					<ul class = "shift">
+						<li>R<sub>2</sub>, R<sub>4</sub>, R<sub>6</sub>: 33K Ω</li>
+						<li>0 Ω <= R<sub>V1</sub>, R<sub>V2</sub>, R<sub>V3</sub> <= 10K Ω</li>
+					</ul>
+					<b>Summing Amplifier</b>
+					<ul class = "shift">
+						<li>R<sub>8</sub>, R<sub>9</sub>, R<sub>10</sub>: 11K Ω</li>
+						<li>0 Ω <= R<sub>V4</sub> <= 10K Ω</li>
+					</ul>
+				</p>
+			</div>
+			<div class = "pic9">
+				<img src = "images/audio_eq_final.png" class = "pic" width = "100%" alt = "">
 			</div>
 		</div>
 	</body>

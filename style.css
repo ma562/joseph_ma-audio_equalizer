@@ -138,6 +138,23 @@
 	right: 2%;
 }
 
+.pic8 {
+	top: 30px;
+	width: 55%;
+	position: relative;
+	right: 2%;
+}
+
+.potentiometer {
+	width: 37%;
+	font-family: 'Poppins', sans-serif;
+	color: #00274c;
+	margin-right: 20px;
+	text-align: justify;
+	position: relative;
+	left: 2%;
+}
+
 .filters_about_2 {
 	width: 32%;
 	font-family: 'Poppins', sans-serif;
@@ -168,26 +185,42 @@
 	left: 2%;
 }
 
+.conclusion {
+	width: 40%;
+	font-family: 'Poppins', sans-serif;
+	color: #00274c;
+	margin-right: 20px;
+	text-align: justify;
+	position: relative;
+	left: 2%;
+}
+
+.pic9 {
+	width: 55%;
+	position: relative;
+	right: 2%;
+}
+
 
 @media (max-width: 1200px){
-	.pic1, .information{
+	.potentiometer, .pic8, .pic1, .information{
 		flex: 100%;
 		left: 0%;
 		right: 0%;
 	}
-	.information {
+	.potentiometer, .information {
 		padding: 15px;
 	}
 }
 
 @media (max-width: 900px) {
-	.op_amp, .pic6, .pic7, .filters_about_2, .pic4, .pic5, .pic2, .pic3, .filters_about {
+	.conclusion, .pic9, .op_amp, .pic6, .pic7, .filters_about_2, .pic4, .pic5, .pic2, .pic3, .filters_about {
 		flex: 100%;
 		left: 0%;
 		right: 0%;
 	}
 
-	.op_amp, .filters_about_2, .filters_about {
+	.conclusion, .op_amp, .filters_about_2, .filters_about {
 		padding: 15px;
 	}
 }
